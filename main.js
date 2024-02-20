@@ -80,5 +80,5 @@ const broadcast = (ws, message, includeSelf) => {
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World!');
+    res.send('Hello World! This is the CYLVESTER Guest Websocket Server.');
 });
