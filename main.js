@@ -71,8 +71,8 @@ const broadcast = (ws, message, includeSelf) => {
   keepAliveId = setInterval(() => {
     wss.clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
-        /*client.send('ping');*/
-        client.ping();
+        client.send('ping'); /*Send Ping as string*/
+        client.ping(); /*sned ping as ping message*/
       }
     });
   }, 20000);
